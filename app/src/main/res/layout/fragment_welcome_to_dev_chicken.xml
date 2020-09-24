@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:paddingEnd="16dp"
+        tools:context=".WelcomeToDevChickenFragment">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWelcomeToSenDoSeller"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Chào mừng tới DevChicken"
+            android:textColor="#0F1E29"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvContentWelcomeSeller"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Gia nhập nhóm của DevChicken để cập nhật những bài viết mới nhất!."
+            android:textColor="#6F787E"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvWelcomeToSenDoSeller" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imvWelcomeSeller"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="24dp"
+            android:background="@android:color/holo_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvContentWelcomeSeller" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSignInSignUpHeadline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Đăng nhập/Đăng ký bằng số điện thoại"
+            android:textColor="#3F4B53"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imvWelcomeSeller" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/OutlinedTextFieldInputPhoneNumber"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:enabled="false"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSignInSignUpHeadline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_gray_text_field_radius_8"
+                android:hint="Nhập số điện thoại"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <View
+            android:id="@+id/vFirstHorizontalLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="23dp"
+            android:background="#E7E8EA"
+            app:layout_constraintEnd_toStartOf="@+id/tvOr"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/OutlinedTextFieldInputPhoneNumber" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Hoặc"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/vSecondHorizontalLine"
+            app:layout_constraintStart_toEndOf="@+id/vFirstHorizontalLine"
+            app:layout_constraintTop_toBottomOf="@+id/OutlinedTextFieldInputPhoneNumber" />
+
+        <View
+            android:id="@+id/vSecondHorizontalLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="23dp"
+            android:background="#E7E8EA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvOr"
+            app:layout_constraintTop_toBottomOf="@+id/OutlinedTextFieldInputPhoneNumber" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:drawableStart="@drawable/ic_baseline_add_24"
+            android:drawableLeft="@drawable/ic_baseline_add_24"
+            android:fontFamily="@font/roboto_bold"
+            android:padding="16dp"
+            android:text="Tham gia nhóm của DevChicken"
+            android:textAllCaps="false"
+            android:textColor="#3F4B53"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOr" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
