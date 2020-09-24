@@ -10,5 +10,32 @@
         android:id="@+id/welcomeToSenDoSellerFragment"
         android:name="com.avp.authentication_android_jetpack.WelcomeToDevChickenFragment"
         android:label="fragment_welcome_to_sen_do_seller"
-        tools:layout="@layout/fragment_welcome_to_dev_chicken" />
+        tools:layout="@layout/fragment_welcome_to_dev_chicken" >
+        <action
+            android:id="@+id/action_welcomeToSenDoSellerFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            />
+        <action
+            android:id="@+id/action_welcomeToSenDoSellerFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.avp.authentication_android_jetpack.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.avp.authentication_android_jetpack.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
 </navigation>
